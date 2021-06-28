@@ -29,6 +29,7 @@ contract GreenClaim
     address payable[] verifiers;
     uint numVerifiers;
     uint rewardThreshold;
+    uint donations;
     bool active;
     
     /* 
@@ -96,7 +97,7 @@ contract GreenClaim
     */
     function Donate () payable public IsActive
     {
-        
+        donations += msg.value;
     }
     
     /*
